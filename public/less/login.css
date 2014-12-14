@@ -1,0 +1,450 @@
+.container-fluid {
+  width: 100%;
+}
+.container-fluid:after,
+.container-fluid .clearfix {
+  clear: both;
+  display: table;
+}
+.container-fluid:after {
+  content: " ";
+}
+.container {
+  width: 1100px;
+  margin: auto;
+}
+.container:after,
+.container .clearfix {
+  clear: both;
+  display: table;
+}
+.container:after {
+  content: " ";
+}
+.row {
+  display: block;
+  width: 100%;
+}
+.row:after,
+.row .clearfix {
+  clear: both;
+  display: table;
+}
+.row:after {
+  content: " ";
+}
+.col-1 {
+  width: 8.33333333%;
+  float: left;
+}
+.col-1:after,
+.col-1 .clearfix {
+  clear: both;
+  display: table;
+}
+.col-1:after {
+  content: " ";
+}
+.offset-1 {
+  margin-left: 8.33333333%;
+}
+.col-2 {
+  width: 16.66666667%;
+  float: left;
+}
+.col-2:after,
+.col-2 .clearfix {
+  clear: both;
+  display: table;
+}
+.col-2:after {
+  content: " ";
+}
+.offset-2 {
+  margin-left: 16.66666667%;
+}
+.col-3 {
+  width: 25%;
+  float: left;
+}
+.col-3:after,
+.col-3 .clearfix {
+  clear: both;
+  display: table;
+}
+.col-3:after {
+  content: " ";
+}
+.offset-3 {
+  margin-left: 25%;
+}
+.col-4 {
+  width: 33.33333333%;
+  float: left;
+}
+.col-4:after,
+.col-4 .clearfix {
+  clear: both;
+  display: table;
+}
+.col-4:after {
+  content: " ";
+}
+.offset-4 {
+  margin-left: 33.33333333%;
+}
+.col-5 {
+  width: 41.66666667%;
+  float: left;
+}
+.col-5:after,
+.col-5 .clearfix {
+  clear: both;
+  display: table;
+}
+.col-5:after {
+  content: " ";
+}
+.offset-5 {
+  margin-left: 41.66666667%;
+}
+.col-6 {
+  width: 50%;
+  float: left;
+}
+.col-6:after,
+.col-6 .clearfix {
+  clear: both;
+  display: table;
+}
+.col-6:after {
+  content: " ";
+}
+.offset-6 {
+  margin-left: 50%;
+}
+.col-7 {
+  width: 58.33333333%;
+  float: left;
+}
+.col-7:after,
+.col-7 .clearfix {
+  clear: both;
+  display: table;
+}
+.col-7:after {
+  content: " ";
+}
+.offset-7 {
+  margin-left: 58.33333333%;
+}
+.col-8 {
+  width: 66.66666667%;
+  float: left;
+}
+.col-8:after,
+.col-8 .clearfix {
+  clear: both;
+  display: table;
+}
+.col-8:after {
+  content: " ";
+}
+.offset-8 {
+  margin-left: 66.66666667%;
+}
+.col-9 {
+  width: 75%;
+  float: left;
+}
+.col-9:after,
+.col-9 .clearfix {
+  clear: both;
+  display: table;
+}
+.col-9:after {
+  content: " ";
+}
+.offset-9 {
+  margin-left: 75%;
+}
+.col-10 {
+  width: 83.33333333%;
+  float: left;
+}
+.col-10:after,
+.col-10 .clearfix {
+  clear: both;
+  display: table;
+}
+.col-10:after {
+  content: " ";
+}
+.offset-10 {
+  margin-left: 83.33333333%;
+}
+.col-11 {
+  width: 91.66666667%;
+  float: left;
+}
+.col-11:after,
+.col-11 .clearfix {
+  clear: both;
+  display: table;
+}
+.col-11:after {
+  content: " ";
+}
+.offset-11 {
+  margin-left: 91.66666667%;
+}
+.col-12 {
+  width: 100%;
+  float: left;
+}
+.col-12:after,
+.col-12 .clearfix {
+  clear: both;
+  display: table;
+}
+.col-12:after {
+  content: " ";
+}
+.offset-12 {
+  margin-left: 100%;
+}
+/*via btn*/
+.btn {
+  color: white;
+  margin: 5px;
+  padding: 8px 15px;
+  border: 0 none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*btn-color-mixin*/
+/*btn-colo-mixin end*/
+.btn.default {
+  background-color: #55606e;
+}
+.btn.default:active,
+.btn.default.active {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+  -o-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+}
+.btn.default:hover,
+.btn.default:active,
+.btn.default.active {
+  background-color: #292e34;
+}
+.btn.primary {
+  background-color: #0080ff;
+}
+.btn.primary:active,
+.btn.primary.active {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+  -o-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+}
+.btn.primary:hover,
+.btn.primary:active,
+.btn.primary.active {
+  background-color: #004d99;
+}
+.btn.success {
+  background-color: #36c77b;
+}
+.btn.success:active,
+.btn.success.active {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+  -o-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+}
+.btn.success:hover,
+.btn.success:active,
+.btn.success.active {
+  background-color: #207749;
+}
+.btn.danger {
+  background-color: #fb5240;
+}
+.btn.danger:active,
+.btn.danger.active {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+  -o-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.8) inset;
+}
+.btn.danger:hover,
+.btn.danger:active,
+.btn.danger.active {
+  background-color: #d11804;
+}
+.btn-liner {
+  background: white;
+  padding: 6px 13px;
+  margin: 5px;
+  border: 2px solid;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*btn-line-color-mixin*/
+/*mixin init end*/
+.btn-liner.default {
+  color: #55606e;
+  border-color: #55606e;
+}
+.btn-liner.default:hover,
+.btn-liner.default:active,
+.btn-liner.default.active {
+  background-color: #a4adb8;
+  border-color: #3f4751;
+}
+.btn-liner.default:active,
+.btn-liner.default.active {
+  -webkit-box-shadow: 0 0 8px 0 #3f4751 inset;
+  -moz-box-shadow: 0 0 8px 0 #3f4751 inset;
+  -o-box-shadow: 0 0 8px 0 #3f4751 inset;
+  box-shadow: 0 0 8px 0 #3f4751 inset;
+  color: #292e34;
+}
+.btn-liner.primary {
+  color: #0080ff;
+  border-color: #0080ff;
+}
+.btn-liner.primary:hover,
+.btn-liner.primary:active,
+.btn-liner.primary.active {
+  background-color: #99ccff;
+  border-color: #0066cc;
+}
+.btn-liner.primary:active,
+.btn-liner.primary.active {
+  -webkit-box-shadow: 0 0 8px 0 #0066cc inset;
+  -moz-box-shadow: 0 0 8px 0 #0066cc inset;
+  -o-box-shadow: 0 0 8px 0 #0066cc inset;
+  box-shadow: 0 0 8px 0 #0066cc inset;
+  color: #004d99;
+}
+.btn-liner.success {
+  color: #36c77b;
+  border-color: #36c77b;
+}
+.btn-liner.success:hover,
+.btn-liner.success:active,
+.btn-liner.success.active {
+  background-color: #ade9ca;
+  border-color: #2b9f62;
+}
+.btn-liner.success:active,
+.btn-liner.success.active {
+  -webkit-box-shadow: 0 0 8px 0 #2b9f62 inset;
+  -moz-box-shadow: 0 0 8px 0 #2b9f62 inset;
+  -o-box-shadow: 0 0 8px 0 #2b9f62 inset;
+  box-shadow: 0 0 8px 0 #2b9f62 inset;
+  color: #207749;
+}
+.btn-liner.danger {
+  color: #fb5240;
+  border-color: #fb5240;
+}
+.btn-liner.danger:hover,
+.btn-liner.danger:active,
+.btn-liner.danger.active {
+  background-color: #fedad6;
+  border-color: #fa250e;
+}
+.btn-liner.danger:active,
+.btn-liner.danger.active {
+  -webkit-box-shadow: 0 0 8px 0 #fa250e inset;
+  -moz-box-shadow: 0 0 8px 0 #fa250e inset;
+  -o-box-shadow: 0 0 8px 0 #fa250e inset;
+  box-shadow: 0 0 8px 0 #fa250e inset;
+  color: #d11804;
+}
+/*input*/
+/*input color mixin*/
+/*input color mixin end*/
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  margin: 5px;
+  outline: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 128, 255, 0.7) inset;
+  -moz-box-shadow: 0 0 8px 0 rgba(0, 128, 255, 0.7) inset;
+  -o-box-shadow: 0 0 8px 0 rgba(0, 128, 255, 0.7) inset;
+  box-shadow: 0 0 8px 0 rgba(0, 128, 255, 0.7) inset;
+}
+input.success,
+select.success,
+textarea.success {
+  border: 2px solid #36c77b;
+  padding: 8px;
+}
+input.success:focus,
+select.success:focus,
+textarea.success:focus {
+  -webkit-box-shadow: 0 0 5px 0 rgba(54, 199, 123, 0.7) inset;
+  -moz-box-shadow: 0 0 5px 0 rgba(54, 199, 123, 0.7) inset;
+  -o-box-shadow: 0 0 5px 0 rgba(54, 199, 123, 0.7) inset;
+  box-shadow: 0 0 5px 0 rgba(54, 199, 123, 0.7) inset;
+}
+input.primary,
+select.primary,
+textarea.primary {
+  border: 2px solid #0080ff;
+  padding: 8px;
+}
+input.primary:focus,
+select.primary:focus,
+textarea.primary:focus {
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 128, 255, 0.7) inset;
+  -moz-box-shadow: 0 0 5px 0 rgba(0, 128, 255, 0.7) inset;
+  -o-box-shadow: 0 0 5px 0 rgba(0, 128, 255, 0.7) inset;
+  box-shadow: 0 0 5px 0 rgba(0, 128, 255, 0.7) inset;
+}
+input.danger,
+select.danger,
+textarea.danger {
+  border: 2px solid #fb5240;
+  padding: 8px;
+}
+input.danger:focus,
+select.danger:focus,
+textarea.danger:focus {
+  -webkit-box-shadow: 0 0 5px 0 rgba(251, 82, 64, 0.7) inset;
+  -moz-box-shadow: 0 0 5px 0 rgba(251, 82, 64, 0.7) inset;
+  -o-box-shadow: 0 0 5px 0 rgba(251, 82, 64, 0.7) inset;
+  box-shadow: 0 0 5px 0 rgba(251, 82, 64, 0.7) inset;
+}
+textarea {
+  display: block;
+  resize: vertical;
+  box-sizing: content-box;
+}

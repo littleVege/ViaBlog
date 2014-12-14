@@ -1,0 +1,70 @@
+@import (once) "via.ui.util.less";
+@import (once) "via.ui.var.less";
+
+@switch-height:30px;
+@switch-width:70px;
+@switch-padding:2px;
+@handle-diameter:@switch-height - 2*@switch-padding;
+
+.handler-color(@color) {
+  background: @color;
+  &:hover {
+    background: darken(@color,10%);
+  }
+  &:active {
+    background: darken(@color,20%);
+  }
+}
+
+.switch {
+  width: @switch-width;
+  height: @switch-height;
+  .border-radius(@switch-height/2);
+  padding: @switch-padding;
+  background: @hover-color;
+  margin: 5px;
+  display: inline-block;
+
+  .handler {
+    width: @handle-diameter;
+    height: @handle-diameter;
+    display: inherit;
+    .transition(margin,0.3s,ease);
+    .border-radius(@handle-diameter/2);
+    position: relative;
+
+    &.primary {
+      .handler-color(@primary-color);
+    }
+    &.success {
+      .handler-color(@success-color);
+    }
+    &.danger {
+      .handler-color(@danger-color);
+    }
+    &.default {
+      .handler-color(@default-color);
+    }
+
+    i {
+      position: absolute;
+      left: 30px;
+      top: 0;
+      margin: 6px 5px;
+      font-size: 10px;
+      color: white;
+    }
+
+  }
+
+  &.active {
+    background: lighten(@success-color,20%);
+    .handler {
+      margin-left: 40px;
+    }
+
+    i {
+      left: -40px;
+    }
+  }
+}

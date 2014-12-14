@@ -1,0 +1,4 @@
+# git ignore file
+_Resharper*
+.idea/
+node_modules/
