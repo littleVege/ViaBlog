@@ -8,6 +8,7 @@ var config = {
         host: 'localhost',
         user: 'root',
         password: 'root',
+        database:'l_blog',
         debug:true,
         multipleStatements: true
     },

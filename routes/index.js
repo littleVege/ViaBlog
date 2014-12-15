@@ -1,18 +1,18 @@
 
 /* GET home page. */
 var path = require('path');
-var v = require('../controllers/validator');
+var validator = require('../controllers/validator');
 var md5 = require('../controllers/md5');
 var user = require('../routes/users');
 var config = require('../config');
-
+var db = require('mysql');
 module.exports = function(app) {
 
   function isValidUserName(userName) {
     if (userName.length>15) {
       return false;
     }
-    if (v.isDbKeyword(userName)) {
+    if (validator.isDbKeyword(userName)) {
       return false;
     }
     return true;
@@ -29,7 +29,7 @@ module.exports = function(app) {
     res.render('index', { title: 'Express' });
   });
 
-  app.use(['/register/submit','/login/submit','/:userName/edit/submit'],function(req,res,next) {
+  app.post(['/register','/login','/:userName/edit'],function(req,res,next) {
     var userName = req.body['name'];
     var password = req.body['password'];
     if (!isValidUserName(userName)) {
@@ -40,14 +40,16 @@ module.exports = function(app) {
     }
     password = md5(password);
     req.body['password'] = password;
+    req.db = db.createConnection(config.mysql_conn);
+    next();
   });
 
   /*users routes*/
   app.get('/login',user.login);
-  app.post('/register/submit',user.submitRegister);
-  app.post('/login/submit',user.submitLogin);
-  app.get('/logout/submit',user.submitLogout);
+  app.post('/register',user.submitRegister);
+  app.post('/login',user.submitLogin);
+  app.get('/logout',user.submitLogout);
   app.get('/:userName/edit',user.edit);
-  app.post('/:userName/edit/submit',user.submitEdit);
+  app.post('/:userName/edit',user.submitEdit);
   app.get('/:userName/del',user.del);
 };
