@@ -1,20 +1,16 @@
 //
    Created by little_vege on 2014/12/15.
+extends layout
 
-doctype html
-html
-   head
-      title= title
-      link(rel='stylesheet', href='/css/login.css')
-   body
-      div.container
-         form(action='/login',method='post')
-            div.row
-               div.col-6.offset-3
-                  div.row
-                     input(type='text', placeholder='username', name='name')
-                  div.row
-                     input(type='text', placeholder='password', name='password')
-            div.row
-               div.col-6.offset-3
-                  input.btn.success(type='submit', value='login',name='submit')
+block content
+   div.container
+      form(action='/login',method='post')
+         div.row
+            div.col-6.offset-3
+               div.row
+                  input(type='text', placeholder='username', name='name')
+               div.row
+                  input(type='text', placeholder='password', name='password')
+         div.row
+            div.col-6.offset-3
+               input.btn.success(type='submit', value='login',name='submit')

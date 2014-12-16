@@ -3,15 +3,6 @@
 
 /*via btn*/
 
-.btn {
-  color: white;
-  margin: 5px;
-  padding: 8px 15px;
-  border: 0 none;
-  .border-radius(@def-border-radius);
-  .box-sizing(border-box);
-}
-
 
 /*btn-color-mixin*/
 .btn-color(@color) {
@@ -25,34 +16,6 @@
 }
 /*btn-colo-mixin end*/
 
-.btn.default {
-  .btn-color(@default-color);
-}
-
-.btn.primary {
-  .btn-color(@primary-color);
-}
-
-.btn.success {
-  .btn-color(@success-color);
-}
-
-.btn.danger {
-  .btn-color(@danger-color);
-}
-
-.btn-liner {
-  @border-width:2px;
-  @padding-h:15px;
-  @padding-v:8px;
-  background: white;
-  padding:@padding-v - @border-width @padding-h - @border-width;
-  margin: 5px;
-  border: @border-width solid;
-  .border-radius(@def-border-radius);
-  .box-sizing(border-box);
-
-}
 
 /*btn-line-color-mixin*/
 .liner-color(@color) {
@@ -69,17 +32,66 @@
 }
 
 /*mixin init end*/
-.btn-liner.default{
-  .liner-color(@default-color);
+
+
+
+
+a,button,input[type="submit"],input[type="button"] {
+
+  &.btn{
+    color: white;
+    margin: 5px;
+    padding: 8px 15px;
+    border: 0 none;
+    .border-radius(@def-border-radius);
+    .box-sizing(border-box);
+
+    &.default {
+      .btn-color(@default-color);
+    }
+
+    &.primary {
+      .btn-color(@primary-color);
+    }
+
+    &.success {
+      .btn-color(@success-color);
+    }
+
+    &.danger {
+      .btn-color(@danger-color);
+    }
+  }
+
+  &.btn-liner {
+    @border-width:2px;
+    @padding-h:15px;
+    @padding-v:8px;
+    background: white;
+    padding:@padding-v - @border-width @padding-h - @border-width;
+    margin: 5px;
+    border: @border-width solid;
+    .border-radius(@def-border-radius);
+    .box-sizing(border-box);
+
+    &.default{
+      .liner-color(@default-color);
+    }
+    &.primary{
+      .liner-color(@primary-color);
+    }
+    &.success{
+      .liner-color(@success-color);
+    }
+    &.danger {
+      .liner-color(@danger-color);
+    }
+  }
+
 }
-.btn-liner.primary{
-  .liner-color(@primary-color);
-}
-.btn-liner.success{
-  .liner-color(@success-color);
-}
-.btn-liner.danger {
-  .liner-color(@danger-color);
-}
+
+
+
+
 
 /*via btn end*/

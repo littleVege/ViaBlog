@@ -1,10 +1,14 @@
 
 var mustache = require('mustache');
-var md5 = require('../controllers/md5');
+var md5 = require('../models/md5');
 var config = require('../config');
 var User = require('../models/user');
 var _ = require('underscore');
+var db = require('mysql');
 module.exports.login = function(req,res,next) {
+    if (req.session.user) {
+        res.redirect('/').end();
+    }
     res.status(200).render('login',{
         title:config.title
     });
@@ -22,15 +26,19 @@ module.exports.submitLogin = function(req,res,next) {
     var db = req.db;
     var userName = req.body["name"];
     var password = req.body["password"];
+    var resJson = {
+        status:'error',
+        message:'not login, your username or password is not valid!'
+    };
+    if (session.user) {
+        res.status(200).redirect('/').end();
+    }
     var findUserSQL = mustache.render(
         "select uid,name,password,email,create_at,level from users where name='{{name}}' and password='{{password}}' limit 1;",
         {name:userName,password:password}
     );
     db.query(findUserSQL,function(err,rows) {
-        var resJson = {
-            status:'error',
-            message:'not login,your username or password is not valid!'
-        };
+
         if (!rows[0]) {
             res.status(200).json(resJson);
         } else {
@@ -44,8 +52,13 @@ module.exports.submitLogin = function(req,res,next) {
     });
 };
 
+module.exports.register = function(req,res,next){
+    res.status(200).render('register',{
+        title:config.title
+    });
+};
+
 /**
- *
  * @route /logout
  * @param req
  * @param res
@@ -76,14 +89,14 @@ module.exports.submitRegister = function (req,res,next) {
     var ip = req.ip;
     var registUserSQL = mustache.render(
         "insert into users (name,password,email,ip_address,level) " +
-        "values ('{{name}}','{{password}}','{{ip}}',{{level}});" +
+        "values ('{{name}}','{{password}}','{{email}}','{{ip}}',{{level}});" +
         "select last_insert_id() as uid;",
-        {name:userName,password:password,email:email,ip:ip}
+        {name:userName,password:password,email:email,ip:ip,level:1}
     );
     db.query(registUserSQL,function(err,results) {
         if (err) throw err;
         var rows = results[1];
-        res.status(200).send(rows[0].uid);
+        res.status(200).redirect('/');
     });
 
 };
@@ -133,3 +146,35 @@ module.exports.del = function(req,res,next) {
 
 };
 
+
+function isValidUserName(userName) {
+    if (userName.length>15) {
+        return false;
+    }
+    if (validator.isDbKeyword(userName)) {
+        return false;
+    }
+    return true;
+}
+
+function isValidPassword(password) {
+    if (password.length<6||password.length>15) {
+        return false;
+    }
+    return true;
+}
+
+module.exports.checkUserInfo = function(req,res,next) {
+    var userName = req.body['name'];
+    var password = req.body['password'];
+    if (!isValidUserName(userName)) {
+        next(new Error('not allowed user name'));
+    }
+    if (!isValidPassword(password)) {
+        next(new Error('not allowed password'));
+    }
+    password = md5(password);
+    req.body['password'] = password;
+    req.db = db.createConnection(config.mysql_conn);
+    next();
+};

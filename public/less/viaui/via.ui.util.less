@@ -1,35 +1,21 @@
 .border-radius(@radius:10px){
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-  -o-border-radius:@radius;
-  border-radius: @radius;
+  .cross-browser(border-radius,@radius);
 }
 
 .box-shadow(@h-shadow:0,@v-shadow:0,@blur:5px,@spread:0,@color:rgba(0,0,0,0.6)) {
-  -webkit-box-shadow: @arguments;
-  -moz-box-shadow: @arguments;
-  -o-box-shadow: @arguments;
-  box-shadow: @arguments;
+  .cross-browser(box-shadow,@arguments);
 }
+
 .box-shadow-inset(@h-shadow:0,@v-shadow:0,@blur:5px,@spread:0,@color:rgba(0,0,0,0.6)) {
-  -webkit-box-shadow: @arguments inset;
-  -moz-box-shadow: @arguments inset;
-  -o-box-shadow: @arguments inset;
-  box-shadow: @arguments inset;
+  .cross-browser(box-shadow,@arguments inset);
 }
 
 .box-sizing(@sizing) {
-  -webkit-box-sizing: @sizing;
-  -moz-box-sizing: @sizing;
-  -o-box-sizing:@sizing;
-  box-sizing: @sizing;
+  .cross-browser(box-sizing,@sizing);
 }
 
 .transition(@type,@timer,@style,@delay:0) {
-  -webkit-transition: @arguments;
-  -moz-transition: @arguments;
-  -o-transition:@arguments;
-  transition: @arguments;
+  .cross-browser(transition,@arguments);
 }
 
 .linear-gradient(@degree,@color-from,@color-to) {
@@ -41,21 +27,9 @@
 }
 
 .animation(@name,@duration,@interation:infinite) {
-  -webkit-animation-name: @name;
-  -webkit-animation-duration: @duration;
-  -webkit-animation-iteration-count: @interation;
-  -moz-animation-name:@name;
-  -moz-animation-duration:@duration;
-  -moz-animation-iteration-count: @interation;
-  -ms-animation-name:@name;
-  -ms-animation-duration:@duration;
-  -ms-animation-iteration-count: @interation;
-  -o-animation-name:@name;
-  -o-animation-duration:@duration;
-  -o-animation-iteration-count: @interation;
-  animation-name:@name;
-  animation-duration:@duration;
-  animation-iteration-count: @interation;
+  .cross-browser(animation-name,@name);
+  .cross-browser(animation-duration,@duration);
+  .cross-browser(animation-interation-count,@interation);
 }
 
 .keyframes(@name,@key) {
@@ -74,6 +48,13 @@
   @keyframes @name {
     @key();
   }
+}
+
+.cross-browser(@name,@args) {
+  -webkit-@{name}:@args;
+  -moz-@{name}:@args;
+  -o-@{name}:@args;
+  @{name}:@args;
 }
 
 

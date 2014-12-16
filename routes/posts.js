@@ -60,7 +60,7 @@ exports.list = function(req,res,next) {
 
 };
 /**
- * @route /admin/post/create
+ * @route /:user/post/create
  * @param req
  * @param res
  * @param next
@@ -85,7 +85,7 @@ exports.create = function(req,res,next) {
 };
 
 /**
- * @route /admin/p/:pid
+ * @route /:user/p/:pid
  * @type get
  * @param req
  * @param res
@@ -96,7 +96,7 @@ exports.edit = function(req,res,next) {
 };
 
 /**
- * @route /admin/:pid/edit
+ * @route /:user/:pid/edit
  * @type post
  * @param req
  * @param res
@@ -107,7 +107,7 @@ exports.submitEdit = function(req,res,next) {
 };
 
 /**
- * @route /admin/p/:pid/delete
+ * @route /:user/p/:pid/delete
  * @type  post
  * @param req
  * @param res
