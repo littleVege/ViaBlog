@@ -105,7 +105,22 @@ module.exports.edit = function(req,res,next) {
  * @param next
  */
 module.exports.submitEdit = function(req,res,next) {
-
+    var db = req.db;
+    db.connect();
+    var password = req.body['password'];
+    var email = req.body['email'];
+    var uid = req.session.user.uid;
+    var updateUserSql = mustache.render(
+            "update users set " +
+            "password='{{password}}'," +
+            "email='{{email}}' " +
+            "where uid={{uid}};",
+        {password:password,email:email,uid:uid}
+    );
+    db.query(updateUserSql,function(err,rows) {
+        /*TODO:send true or false*/
+    });
+    db.end();
 };
 
 /**
