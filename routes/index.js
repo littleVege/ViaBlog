@@ -27,4 +27,10 @@ module.exports = function(app) {
   app.get('/:userName/edit',user.edit);
   app.post('/:userName/edit',user.submitEdit);
   app.get('/:userName/del',user.del);
+
+  app.get('/admin',function(req,res,next) {
+      res.render('dashboard',{
+          title:config.title
+      });
+  });
 };

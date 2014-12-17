@@ -1,0 +1,69 @@
+@import "viaui/via.ui.util.less";
+@import "viaui/via.ui.grid.less";
+@import "var";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: @default-font-size;
+  font-family: "Helvetica Neue", Helvetica, 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,body {
+  height: 100%;
+}
+
+@sidebar-width:50px;
+.col-6 {
+  min-height: 100px;
+}
+.main {
+  padding-left: @sidebar-width;
+  height: 100%;
+}
+
+.sidebar {
+  width: @sidebar-width;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: @gray-dark;
+  .box-shadow(3px,0,5px,0,rgba(0,0,0,0.2));
+
+  .list {
+    list-style: none;
+    @dot-width:30px;
+    li {
+      margin: 40px (@sidebar-width - @dot-width)/2;
+      padding: 4px;
+      .border-radius(@dot-width/2);
+      background: @blue-base;
+      text-align: center;
+      width: @dot-width;
+      height: @dot-width;
+      cursor: pointer;
+      .transition(background,0.3s,ease);
+      .box-shadow(3px,2px,2px,-1px,rgba(0,0,0,0.5));
+      &:hover,&.hover {
+        background: @blue-light;
+      }
+      &:active,&.active {
+        background: @blue-lighter;
+        .box-shadow-inset(0,0,2px,0,rgba(0,0,0,0.3));
+      }
+      a {
+        font-size: 20px;
+        color: white;
+      }
+
+    }
+
+  }
+}
+
