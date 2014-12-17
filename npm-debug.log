@@ -1,0 +1,258 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   'C:\\Users\\little_vege\\AppData\\Roaming\\npm\\node_modules\\cnpm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   '--userconfig=C:\\Users\\little_vege\\.cnpmrc',
+1 verbose cli   '--disturl=https://npm.taobao.org/dist',
+1 verbose cli   '--cache=C:\\Users\\little_vege\\.npm\\.cache_cnpm',
+1 verbose cli   '--registry=https://registry.npm.taobao.org',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'bower' ]
+2 info using npm@2.1.10
+3 info using node@v0.10.33
+4 silly cache add args [ 'bower', null ]
+5 verbose cache add spec bower
+6 silly cache add parsed spec { raw: 'bower',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'bower',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed bower@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'bower', range: '*', hasData: false }
+11 silly mapToRegistry name bower
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npm.taobao.org/
+14 silly mapToRegistry uri https://registry.npm.taobao.org/bower
+15 verbose addNameRange registry:https://registry.npm.taobao.org/bower not in flight; fetching
+16 verbose request uri https://registry.npm.taobao.org/bower
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 00:14:16
+19 verbose request id 8a02c0031e94ae67
+20 http request GET https://registry.npm.taobao.org/bower
+21 http 200 https://registry.npm.taobao.org/bower
+22 silly get cb [ 200,
+22 silly get   { server: 'nginx/1.1.19',
+22 silly get     date: 'Wed, 17 Dec 2014 16:14:16 GMT',
+22 silly get     'content-type': 'application/json; charset=utf-8',
+22 silly get     'content-length': '123555',
+22 silly get     connection: 'keep-alive',
+22 silly get     'x-powered-by': 'koa',
+22 silly get     etag: '"1411951860000"',
+22 silly get     'x-readtime': '340' } ]
+23 silly addNameRange number 2 { name: 'bower', range: '*', hasData: true }
+24 silly addNameRange versions [ 'bower',
+24 silly addNameRange   [ '1.3.12',
+24 silly addNameRange     '1.3.11',
+24 silly addNameRange     '1.3.10',
+24 silly addNameRange     '1.3.9',
+24 silly addNameRange     '1.3.8',
+24 silly addNameRange     '1.3.7',
+24 silly addNameRange     '1.3.6',
+24 silly addNameRange     '1.3.5',
+24 silly addNameRange     '1.3.4',
+24 silly addNameRange     '1.3.3',
+24 silly addNameRange     '1.3.2',
+24 silly addNameRange     '1.3.1',
+24 silly addNameRange     '1.3.0',
+24 silly addNameRange     '1.2.8',
+24 silly addNameRange     '1.2.7',
+24 silly addNameRange     '1.2.6',
+24 silly addNameRange     '1.2.5',
+24 silly addNameRange     '1.2.4',
+24 silly addNameRange     '1.2.3',
+24 silly addNameRange     '1.2.2',
+24 silly addNameRange     '1.2.1',
+24 silly addNameRange     '1.2.0',
+24 silly addNameRange     '1.1.2',
+24 silly addNameRange     '1.1.1',
+24 silly addNameRange     '1.1.0',
+24 silly addNameRange     '1.0.3',
+24 silly addNameRange     '1.0.2',
+24 silly addNameRange     '1.0.1',
+24 silly addNameRange     '1.0.0',
+24 silly addNameRange     '0.10.0',
+24 silly addNameRange     '0.9.2',
+24 silly addNameRange     '0.9.1',
+24 silly addNameRange     '0.9.0',
+24 silly addNameRange     '0.8.6',
+24 silly addNameRange     '0.8.5',
+24 silly addNameRange     '0.8.4',
+24 silly addNameRange     '0.8.3',
+24 silly addNameRange     '0.8.2',
+24 silly addNameRange     '0.8.1',
+24 silly addNameRange     '0.8.0',
+24 silly addNameRange     '0.7.1',
+24 silly addNameRange     '0.7.0',
+24 silly addNameRange     '0.6.8',
+24 silly addNameRange     '0.6.7',
+24 silly addNameRange     '0.6.6',
+24 silly addNameRange     '0.6.5',
+24 silly addNameRange     '0.6.4',
+24 silly addNameRange     '0.6.3',
+24 silly addNameRange     '0.6.2',
+24 silly addNameRange     '0.6.1',
+24 silly addNameRange     '0.6.0',
+24 silly addNameRange     '0.5.1',
+24 silly addNameRange     '0.5.0',
+24 silly addNameRange     '0.4.0',
+24 silly addNameRange     '0.3.2',
+24 silly addNameRange     '0.3.1',
+24 silly addNameRange     '0.3.0',
+24 silly addNameRange     '0.2.0',
+24 silly addNameRange     '0.1.3',
+24 silly addNameRange     '0.1.2',
+24 silly addNameRange     '0.1.0' ] ]
+25 verbose addNamed bower@1.3.12
+26 silly addNamed semver.valid 1.3.12
+27 silly addNamed semver.validRange 1.3.12
+28 silly mapToRegistry name bower
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npm.taobao.org/
+31 silly mapToRegistry uri https://registry.npm.taobao.org/bower
+32 verbose addRemoteTarball https://registry.npm.taobao.org/bower/download/bower-1.3.12.tgz not in flight; adding
+33 verbose addRemoteTarball [ 'https://registry.npm.taobao.org/bower/download/bower-1.3.12.tgz',
+33 verbose addRemoteTarball   '37de0edb3904baf90aee13384a1a379a05ee214c' ]
+34 info retry fetch attempt 1 at 00:14:16
+35 info attempt registry request try #1 at 00:14:16
+36 http fetch GET https://registry.npm.taobao.org/bower/download/bower-1.3.12.tgz
+37 http fetch 200 https://registry.npm.taobao.org/bower/download/bower-1.3.12.tgz
+38 silly fetchAndShaCheck shasum 37de0edb3904baf90aee13384a1a379a05ee214c
+39 verbose addTmpTarball C:\Users\LITTLE~1\AppData\Local\Temp\npm-8224-fa0957e0\registry.npm.taobao.org\bower\download\bower-1.3.12.tgz not in flight; adding
+40 verbose addTmpTarball already have metadata; skipping unpack for bower@1.3.12
+41 silly cache afterAdd bower@1.3.12
+42 verbose afterAdd C:\Users\little_vege\.npm\.cache_cnpm\bower\1.3.12\package\package.json not in flight; writing
+43 verbose afterAdd C:\Users\little_vege\.npm\.cache_cnpm\bower\1.3.12\package\package.json written
+44 silly install resolved [ { name: 'bower',
+44 silly install resolved     version: '1.3.12',
+44 silly install resolved     description: 'The browser package manager',
+44 silly install resolved     author: { name: 'Twitter' },
+44 silly install resolved     licenses: [ [Object] ],
+44 silly install resolved     repository: { type: 'git', url: 'https://github.com/bower/bower' },
+44 silly install resolved     main: 'lib',
+44 silly install resolved     homepage: 'http://bower.io',
+44 silly install resolved     engines: { node: '>=0.10.0' },
+44 silly install resolved     dependencies:
+44 silly install resolved      { abbrev: '~1.0.4',
+44 silly install resolved        archy: '0.0.2',
+44 silly install resolved        'bower-config': '~0.5.2',
+44 silly install resolved        'bower-endpoint-parser': '~0.2.2',
+44 silly install resolved        'bower-json': '~0.4.0',
+44 silly install resolved        'bower-logger': '~0.2.2',
+44 silly install resolved        'bower-registry-client': '~0.2.0',
+44 silly install resolved        cardinal: '0.4.0',
+44 silly install resolved        chalk: '0.5.0',
+44 silly install resolved        chmodr: '0.1.0',
+44 silly install resolved        'decompress-zip': '0.0.8',
+44 silly install resolved        fstream: '~1.0.2',
+44 silly install resolved        'fstream-ignore': '~1.0.1',
+44 silly install resolved        glob: '~4.0.2',
+44 silly install resolved        'graceful-fs': '~3.0.1',
+44 silly install resolved        handlebars: '~2.0.0',
+44 silly install resolved        inquirer: '0.7.1',
+44 silly install resolved        insight: '0.4.3',
+44 silly install resolved        'is-root': '~1.0.0',
+44 silly install resolved        junk: '~1.0.0',
+44 silly install resolved        lockfile: '~1.0.0',
+44 silly install resolved        'lru-cache': '~2.5.0',
+44 silly install resolved        mkdirp: '0.5.0',
+44 silly install resolved        mout: '~0.9.0',
+44 silly install resolved        nopt: '~3.0.0',
+44 silly install resolved        opn: '~1.0.0',
+44 silly install resolved        osenv: '0.1.0',
+44 silly install resolved        'p-throttler': '0.1.0',
+44 silly install resolved        promptly: '0.2.0',
+44 silly install resolved        q: '~1.0.1',
+44 silly install resolved        request: '~2.42.0',
+44 silly install resolved        'request-progress': '0.3.0',
+44 silly install resolved        retry: '0.6.0',
+44 silly install resolved        rimraf: '~2.2.0',
+44 silly install resolved        semver: '~2.3.0',
+44 silly install resolved        'shell-quote': '~1.4.1',
+44 silly install resolved        'stringify-object': '~1.0.0',
+44 silly install resolved        'tar-fs': '0.5.2',
+44 silly install resolved        tmp: '0.0.23',
+44 silly install resolved        'update-notifier': '0.2.0',
+44 silly install resolved        which: '~1.0.5' },
+44 silly install resolved     devDependencies:
+44 silly install resolved      { coveralls: '~2.11.0',
+44 silly install resolved        'expect.js': '~0.3.1',
+44 silly install resolved        grunt: '~0.4.4',
+44 silly install resolved        'grunt-cli': '^0.1.13',
+44 silly install resolved        'grunt-contrib-jshint': '~0.10.0',
+44 silly install resolved        'grunt-contrib-watch': '~0.6.1',
+44 silly install resolved        'grunt-exec': '~0.4.2',
+44 silly install resolved        'grunt-simple-mocha': '~0.4.0',
+44 silly install resolved        istanbul: '~0.3.2',
+44 silly install resolved        'load-grunt-tasks': '~0.6.0',
+44 silly install resolved        mocha: '~1.21.4',
+44 silly install resolved        nock: '~0.46.0',
+44 silly install resolved        'node-uuid': '~1.4.1',
+44 silly install resolved        proxyquire: '~1.0.1' },
+44 silly install resolved     scripts: { test: 'grunt test' },
+44 silly install resolved     bin: { bower: 'bin/bower' },
+44 silly install resolved     preferGlobal: true,
+44 silly install resolved     gitHead: 'b26c072f0db054a1902ec4d2e3726dbf8a1c799a',
+44 silly install resolved     bugs: { url: 'https://github.com/bower/bower/issues' },
+44 silly install resolved     _id: 'bower@1.3.12',
+44 silly install resolved     _shasum: '37de0edb3904baf90aee13384a1a379a05ee214c',
+44 silly install resolved     _from: 'bower@*',
+44 silly install resolved     _npmVersion: '2.0.0',
+44 silly install resolved     _npmUser: { name: 'sheerun', email: 'sheerun@sher.pl' },
+44 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+44 silly install resolved     dist:
+44 silly install resolved      { shasum: '37de0edb3904baf90aee13384a1a379a05ee214c',
+44 silly install resolved        size: 117317,
+44 silly install resolved        noattachment: false,
+44 silly install resolved        tarball: 'http://registry.npm.taobao.org/bower/download/bower-1.3.12.tgz' },
+44 silly install resolved     directories: {},
+44 silly install resolved     publish_time: 1411922395809,
+44 silly install resolved     _cnpm_publish_time: 1411922395809,
+44 silly install resolved     _resolved: 'https://registry.npm.taobao.org/bower/download/bower-1.3.12.tgz' } ]
+45 info install bower@1.3.12 into C:\Program Files\nodejs
+46 info installOne bower@1.3.12
+47 verbose installOne of bower to C:\Program Files\nodejs not in flight; installing
+48 verbose lock using C:\Users\little_vege\.npm\.cache_cnpm\_locks\bower-c09afa036a5c141c.lock for C:\Program Files\nodejs\node_modules\bower
+49 silly install write writing bower 1.3.12 to C:\Program Files\nodejs\node_modules\bower
+50 silly cache addNamed cb bower@1.3.12
+51 verbose unbuild node_modules\bower
+52 verbose gentlyRm vacuuming C:\Program Files\nodejs\node_modules\bower
+53 verbose tar unpack C:\Users\little_vege\.npm\.cache_cnpm\bower\1.3.12\package.tgz
+54 verbose tar unpacking to C:\Program Files\nodejs\node_modules\bower
+55 verbose gentlyRm vacuuming C:\Program Files\nodejs\node_modules\bower
+56 silly gunzTarPerm modes [ '777', '666' ]
+57 error tar.unpack untar error C:\Users\little_vege\.npm\.cache_cnpm\bower\1.3.12\package.tgz
+58 verbose unlock done using C:\Users\little_vege\.npm\.cache_cnpm\_locks\bower-c09afa036a5c141c.lock for C:\Program Files\nodejs\node_modules\bower
+59 verbose fstream_path C:\Program Files\nodejs\node_modules\bower
+60 verbose fstream_type Directory
+61 verbose fstream_class DirWriter
+62 verbose stack Error: EPERM, mkdir 'C:\Program Files\nodejs\node_modules\bower'
+63 verbose fstream_stack C:\Users\little_vege\AppData\Roaming\npm\node_modules\cnpm\node_modules\npm\node_modules\fstream\lib\dir-writer.js:36:23
+63 verbose fstream_stack C:\Users\little_vege\AppData\Roaming\npm\node_modules\cnpm\node_modules\npm\node_modules\mkdirp\index.js:46:53
+63 verbose fstream_stack Object.oncomplete (fs.js:107:15)
+64 verbose cwd D:\Dev\GitHub\littleVegeBlog
+65 error Windows_NT 6.2.9200
+66 error argv "node" "C:\\Users\\little_vege\\AppData\\Roaming\\npm\\node_modules\\cnpm\\node_modules\\npm\\bin\\npm-cli.js" "--userconfig=C:\\Users\\little_vege\\.cnpmrc" "--disturl=https://npm.taobao.org/dist" "--cache=C:\\Users\\little_vege\\.npm\\.cache_cnpm" "--registry=https://registry.npm.taobao.org" "install" "-g" "bower"
+67 error node v0.10.33
+68 error npm  v2.1.10
+69 error path C:\Program Files\nodejs\node_modules\bower
+70 error code EPERM
+71 error errno 50
+72 error Error: EPERM, mkdir 'C:\Program Files\nodejs\node_modules\bower'
+72 error  { [Error: EPERM, mkdir 'C:\Program Files\nodejs\node_modules\bower']
+72 error   errno: 50,
+72 error   code: 'EPERM',
+72 error   path: 'C:\\Program Files\\nodejs\\node_modules\\bower',
+72 error   fstream_type: 'Directory',
+72 error   fstream_path: 'C:\\Program Files\\nodejs\\node_modules\\bower',
+72 error   fstream_class: 'DirWriter',
+72 error   fstream_stack:
+72 error    [ 'C:\\Users\\little_vege\\AppData\\Roaming\\npm\\node_modules\\cnpm\\node_modules\\npm\\node_modules\\fstream\\lib\\dir-writer.js:36:23',
+72 error      'C:\\Users\\little_vege\\AppData\\Roaming\\npm\\node_modules\\cnpm\\node_modules\\npm\\node_modules\\mkdirp\\index.js:46:53',
+72 error      'Object.oncomplete (fs.js:107:15)' ] }
+73 error Please try running this command again as root/Administrator.
+74 verbose exit [ 50, true ]
+75 verbose unbuild node_modules\bower
+76 verbose gentlyRm vacuuming C:\Program Files\nodejs\node_modules\bower
