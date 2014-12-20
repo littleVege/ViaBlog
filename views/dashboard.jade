@@ -17,7 +17,7 @@ block content
                     a.icon-dashboard
                 li
                     a.icon-cog
-            img.avatar(src="",border=0)
+            img.avatar(src="img/git.jpg",border=0)
 
         //create post tab
         main.row.tab.tab-create-post
@@ -27,82 +27,25 @@ block content
                 section.col-6.md
                     textarea(placeholder='markdown here...')
                 section.col-6.pre
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
-                    h1 my name is
             footer
-                a.tag-icon.icon-tags
-                input.input-tag(type='text',placeholder='input a tag')
+                div.col-8
+                    a.tag-icon.icon-tags
+                    input.input-tag(type='text',placeholder='input a tag')
+                div.col-4
+                    button.btn.primary.publish-btn publish
         //post list tab
         main.row.tab.tab-post-list.active
             main.row.content
                 section.col-4.posts-wrap
                     header.title
                         h2 Post List
-                        a.add-new.icon-plus
+                        a.btn.success.add-new.icon-plus
 
                     ul.list
                         li
                             h2 new post name
                             p this is a post
-                        li
+                        li.active
                             h2 new post name
                             p this is a post
                         li
@@ -148,4 +91,6 @@ block content
                             h2 new post name
                             p this is a post
                 section.col-8.pre
-
+        //config tab
+        main.row.tab.tab-config
+            

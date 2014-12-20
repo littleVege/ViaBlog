@@ -1,0 +1,79 @@
+@import "../viaui/via.ui.util.less";
+@import "var";
+.tab-post-list {
+  .posts-wrap,.pre {
+    height: 100%;
+  }
+  .content {
+    height: 100%;
+  }
+
+  .posts-wrap {
+    @title-height:50px;
+    padding-top: @title-height;
+    position: relative;
+    height: 100%;
+    .title {
+      height: @title-height;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding-left: 15px;
+      border-bottom: 1px solid @gray-light;
+      .box-shadow(0,5px,5px,-5px,rgba(0,0,0,0.2));
+      h2 {
+        font-size: 20px;
+        color: @gray-base;
+        line-height: @title-height;
+      }
+
+      .add-new {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 25px;
+        margin: 5px;
+        padding: 5px 10px;
+        line-height: 30px;
+      }
+    }
+    .list {
+      list-style: none;
+      height: 100%;
+      overflow-y: auto;
+      border: 1px solid @gray-lighter;
+      border-left: 0 none;
+      border-right: 0 none;
+      li {
+        border-bottom: 1px solid @gray-light;
+        padding: 10px 10px 10px 30px;
+        &:hover {
+          background: @gray-lighter;
+        }
+        &:active,&.active {
+          background: @gray-lighter;
+          border-left: 5px solid @blue-dark;
+          padding-left: 25px;
+        }
+        h2,p {
+          margin: 5px;
+        }
+        h2 {
+          font-size: 18px;
+          font-weight: bold;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .pre {
+    height: 100%;
+    border-left: 1px solid @gray-light;
+    padding: 30px;
+  }
+
+}

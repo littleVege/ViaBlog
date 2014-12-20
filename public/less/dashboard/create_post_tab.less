@@ -1,0 +1,99 @@
+@import "../viaui/via.ui.util.less";
+@import "var";
+.tab-create-post {
+  @header-height: 50px;
+  @tags-height:50px;
+  padding-top: @header-height;
+  padding-bottom: @tags-height;
+  position: relative;
+  header {
+    height: @header-height;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    .box-shadow(0,5px,5px,-5px,rgba(255,255,255,0.3));
+    .title {
+      font-size: 25px;
+      font-weight: bold;
+      line-height: @header-height;
+      width: 100%;
+      border: 0 none;
+      padding: 0 30px;
+      outline: none;
+    }
+  }
+  .content {
+    height: 100%;
+    position: relative;
+    border-top: 1px solid @gray-light;
+    //    &:before {
+    //      @split-line-height:500px;
+    //      content: "";
+    //      position: fixed;
+    //      height: @split-line-height;
+    //      width: 1px;
+    //      .linear-gradient(0,white,@gray-lighter);
+    //      left: 50%;
+    //      top: 50%;
+    //      margin-left: -5px;
+    //      margin-top: -(@split-line-height) /2;
+    //    }
+  }
+  .md,.pre {
+    height: 100%;
+  }
+  .pre {
+    overflow-y: auto;
+    padding: 30px;
+    border-left: 1px solid @gray-light;
+  }
+  .md {
+    overflow:hidden;
+  }
+  .md textarea {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    overflow: auto;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  footer {
+    height: @tags-height;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    background: @gray-base;
+    .box-shadow(0,-5px,5px,0,rgba(0,0,0,0.1));
+
+    .tag-icon {
+      line-height: @tags-height;
+      font-size: 16px;
+      color: @gray-lighter;
+      margin: 10px 10px 10px 30px;
+      padding: 10px 10px 10px 0;
+    }
+
+    .input-tag {
+      height: 30px;
+      outline: none;
+      line-height: 30px;
+      font-size: 16px;
+      background: transparent;
+      border: 0 none;
+      color: #ffffff;
+    }
+
+    .publish-btn {
+      margin: 10px;
+      float: right;
+    }
+  }
+}
