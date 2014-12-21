@@ -29,7 +29,7 @@ module.exports = function(app) {
   app.get('/:userName/del',user.del);
 
   app.get('/admin',function(req,res,next) {
-      res.render('dashboard',{
+      res.render('admin/admin',{
           title:config.title
       });
   });

@@ -2,10 +2,11 @@
    Created by LittleVege on 2014/12/17.
 
 doctype html
-html
+html(ng-app='admin')
     head
         title= title
         link(rel='stylesheet', href='/css/dashboard.css')
         link(rel='styleSheet', href='/lib/font-awesome/css/font-awesome.css')
+        script(type='text/javascript', src='/lib/angular/angular.min.js')
     body
         block content

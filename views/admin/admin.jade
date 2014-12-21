@@ -1,0 +1,29 @@
+//
+   Created by LittleVege on 2014/12/17.
+
+extends layout
+block content
+    div.container-fluid.main
+        //side bar
+        aside.sidebar
+            ul.list
+                li
+                    a.icon-home
+                li
+                    a.icon-list
+                li.active
+                    a.icon-plus
+                li
+                    a.icon-dashboard
+                li
+                    a.icon-cog
+            img.avatar(src="img/git.jpg")
+        //create post tab
+        include tab_create_post
+        //post list tab
+        include tab_post_list
+        //config tab
+        include tab_config
+    script(type="text/javascript",src="/js/admin/module.js")
+    script(type="text/javascript",src="/js/admin/controller.js")
+            
