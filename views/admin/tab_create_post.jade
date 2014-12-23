@@ -2,13 +2,13 @@
    Created by little_vege on 2014/12/20.
 
 //create post tab
-main.row.tab.tab-create-post
+main.row.tab.tab-create-post.active(ng-controller="CreatePostController")
    header
-       input.title(type='text',placeholder='title')
+       input.title(type='text',placeholder="title",ng-model="title")
    main.row.content
        section.col-6.md
-           textarea(placeholder='markdown here...')
-       section.col-6.pre
+           textarea(ui-codemirror="cmOption",ng-model="mdContent")
+       section.col-6.pre(ng-bind-html="asHtml(htmlContent)")
    footer
        div.col-8
            a.tag-icon.icon-tags
