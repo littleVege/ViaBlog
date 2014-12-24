@@ -11,11 +11,13 @@ AdminModule
             });
         }
     }])
-    .controller('TabsController',['$scope',function($scope) {
-        $scope.activeTab = null;
-        $scope.tabs=[];
-    }])
-    .controller("CreatePostController",['$scope',"$sce",function($scope,$sce) {
+    .controller('TabsController',function($rootScope,$scope) {
+        $scope.path = "";
+        $rootScope.$on('$routeChangeSuccess',function(val) {
+            alert(val);
+        });
+    })
+    .controller("EditPostController",['$scope',"$sce",function($scope,$sce) {
         // The ui-codemirror option
         $scope.cmOption = {
             lineNumbers: false,

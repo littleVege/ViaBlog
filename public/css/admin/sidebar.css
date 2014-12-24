@@ -1,0 +1,76 @@
+.sidebar {
+  width: 100px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 500;
+  background: -webkit-linear-gradient(0, #36c77b, #0080ff);
+  background: -moz-linear-gradient(0, #36c77b, #0080ff);
+  background: -ms-linear-gradient(0, #36c77b, #0080ff);
+  background: -o-linear-gradient(0, #36c77b, #0080ff);
+  background: linear-gradient(0, #36c77b, #0080ff);
+  -webkit-box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+.sidebar .list {
+  list-style: none;
+}
+.sidebar .list li {
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease 0;
+  -moz-transition: background 0.3s ease 0;
+  -o-transition: background 0.3s ease 0;
+  transition: background 0.3s ease 0;
+}
+.sidebar .list li:hover,
+.sidebar .list li.hover {
+  background: #66b3ff;
+}
+.sidebar .list li:active,
+.sidebar .list li.active {
+  background: #66b3ff;
+  -webkit-box-shadow: 0 -10px 10px -10px rgba(0, 0, 0, 0.5) inset;
+  -moz-box-shadow: 0 -10px 10px -10px rgba(0, 0, 0, 0.5) inset;
+  -o-box-shadow: 0 -10px 10px -10px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 0 -10px 10px -10px rgba(0, 0, 0, 0.5) inset;
+}
+.sidebar .list li a {
+  font-size: 30px;
+  padding: 20px;
+  line-height: 100px;
+  position: relative;
+  color: #ffffff;
+}
+.sidebar .avatar {
+  border: 1px solid #ffffff;
+  background: #55606e;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  -webkit-box-shadow: 3px 0 3px -3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 0 3px -3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 3px 0 3px -3px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 0 3px -3px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  margin-bottom: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: box-shadow 0.3s ease 0;
+  -moz-transition: box-shadow 0.3s ease 0;
+  -o-transition: box-shadow 0.3s ease 0;
+  transition: box-shadow 0.3s ease 0;
+}
+.sidebar .avatar:hover {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}

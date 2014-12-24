@@ -330,7 +330,6 @@ body {
   -moz-transition: background 0.3s ease 0;
   -o-transition: background 0.3s ease 0;
   transition: background 0.3s ease 0;
-  color: #ffffff;
 }
 .sidebar .list li:hover,
 .sidebar .list li.hover {
@@ -349,6 +348,7 @@ body {
   padding: 20px;
   line-height: 100px;
   position: relative;
+  color: #ffffff;
 }
 .sidebar .avatar {
   border: 1px solid #ffffff;

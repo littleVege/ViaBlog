@@ -5,14 +5,16 @@ doctype html
 html(ng-app='admin')
     head
         title= title
-        link(rel='stylesheet', href='/css/dashboard.css')
+        link(rel='stylesheet', href='/css/admin.css')
         link(rel='styleSheet', href='/lib/font-awesome/css/font-awesome.css')
         link(rel="stylesheet", href="/lib/codemirror/lib/codemirror.css")
         link(rel="stylesheet", href="/lib/codemirror/theme/monokai.css")
-        script(type='text/javascript', src='/lib/angular/angular.min.js')
+
     body
         block content
-
+        //Scriptes
+        script(type='text/javascript', src='/lib/angular/angular.min.js')
+        script(type="text/javascript", src="/lib/angular/modules/ngRoute/route.js")
         script(type="text/javascript", src="/lib/angular/modules/ngSanitize/sanitize.js")
         script(type="text/javascript", src="/lib/codemirror/lib/codemirror.js")
         script(type="text/javascript", src="/lib/codemirror/mode/xml/xml.js")

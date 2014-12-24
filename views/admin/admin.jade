@@ -3,25 +3,20 @@
 
 extends layout
 block content
-    div.container-fluid.main
+    div.container-fluid.main(ng-controller="TabsController")
         //side bar
         aside.sidebar
             ul.list
                 li
-                    a.icon-home
+                    a.icon-home(href="/")
                 li
-                    a.icon-list
-                li.active
-                    a.icon-plus
+                    a.icon-list(href="admin/list")
+                li
+                    a.icon-plus(href="admin/create")
                 li
                     a.icon-dashboard
                 li
                     a.icon-cog
             img.avatar(src="img/git.jpg")
-        //create post tab
-        include tab_create_post
-        //post list tab
-        include tab_post_list
-        //config tab
-        include tab_config
+        main(ng-view)
             

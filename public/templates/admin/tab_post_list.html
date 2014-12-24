@@ -1,0 +1,16 @@
+<main ng-controller="PostListController" class="row tab tab-post-list">
+    <main class="row content">
+        <section class="col-4 posts-wrap">
+            <header class="title">
+                <h2>Post List</h2><a class="btn success add-new icon-plus"></a>
+            </header>
+            <ul class="list">
+                <li ng-repeat="post in posts" ng-click='getContent(post)' ng-class="{true: 'active', false: ''}[post===currentPost]">
+                    <h2>{{post.title}}</h2>
+                    <p>{{post.abstract}}...</p>
+                </li>
+            </ul>
+        </section>
+        <section class="col-8 pre">{{currentPost.content||""}}</section>
+    </main>
+</main>
