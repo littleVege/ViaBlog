@@ -1,13 +1,20 @@
 @import "viaui/via.ui.util.less";
-@import "viaui/via.ui.grid.less";
 @import "admin/var";
+//@import "reset";
+@import "viaui/via.ui.grid.less";
 
-* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: @default-font-size;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
   font-family: "Helvetica Neue", Helvetica, 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif;
+  font-size: 14px;
 }
 
 a {
@@ -69,8 +76,15 @@ html,body {
   height: 100%;
 }
 
+.wrap-tabs {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  .clearfix();
+}
+
 .tab {
-  display: none;
+  display: block;
   height: 100%;
   &.active {
     display: block;

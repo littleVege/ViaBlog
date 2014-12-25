@@ -11,30 +11,37 @@ AdminModule
             });
         }
     }])
-    .controller('TabsController',function($rootScope,$scope) {
+    .controller('TabsController',function($scope) {
         $scope.path = "";
-        $rootScope.$on('$routeChangeSuccess',function(val) {
-            alert(val);
-        });
     })
-    .controller("EditPostController",['$scope',"$sce",function($scope,$sce) {
-        // The ui-codemirror option
-        $scope.cmOption = {
-            lineNumbers: false,
-            indentWithTabs: true,
-            theme:'monokai',
-            mode:"markdown"
-        };
-        $scope.mdContent="";
-        $scope.title = "";
+    .controller("EditPostController",['$scope',"$sce",'$routeParams','$http',
+        function($scope,$sce,$routeParams,$http) {
+            var pid = $routeParams.pid;
 
-        $scope.$watch('mdContent',function(val) {
-            $scope.htmlContent = marked(val);
-        });
+            if (pid) {
+                $http.get('/api/p/'+pid,function(data) {
+                    $scope.mdContent = data.markdown;
+                    $scope.title = data.title;
+                });
+            }
 
-        $scope.asHtml = function(html) {
-            return $sce.trustAsHtml(html);
-        };
+            $scope.cmOption = {
+                lineNumbers: false,
+                indentWithTabs: true,
+                theme:'monokai',
+                mode:"markdown"
+            };
+            $scope.mdContent="";
+            $scope.title = "";
 
-        $scope.htmlContent = "";
-    }]);
+            $scope.$watch('mdContent',function(val) {
+                $scope.htmlContent = marked(val);
+            });
+
+            $scope.asHtml = function(html) {
+                return $sce.trustAsHtml(html);
+            };
+
+            $scope.htmlContent = "";
+        }
+    ]);
