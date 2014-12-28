@@ -6,20 +6,21 @@ html(ng-app='admin')
     head
         title= title
         link(rel='stylesheet', href='/css/admin.css')
-        link(rel='styleSheet', href='/lib/font-awesome/css/font-awesome.css')
-        link(rel="stylesheet", href="/lib/codemirror/lib/codemirror.css")
-        link(rel="stylesheet", href="/lib/codemirror/theme/monokai.css")
+        link(rel='styleSheet', href="/components/font-awesome/css/font-awesome.css")
+        link(rel="stylesheet", href="/components/codemirror/lib/codemirror.css")
+        link(rel="stylesheet", href="/components/codemirror/theme/monokai.css")
 
     body
         block content
         //Scriptes
-        script(type='text/javascript', src='/lib/angular/angular.min.js')
-        script(type="text/javascript", src="/lib/angular/modules/angular-route.min.js")
-        script(type="text/javascript", src="/lib/angular/modules/angular-sanitize.min.js")
-        script(type="text/javascript", src="/lib/codemirror/lib/codemirror.js")
-        script(type="text/javascript", src="/lib/codemirror/mode/xml/xml.js")
-        script(type="text/javascript", src="/lib/codemirror/mode/markdown/markdown.js")
-        script(type="text/javascript", src="/lib/codemirror/ui-codemirror/ui-codemirror.js")
+        script(type='text/javascript', src='/components/angular/angular.min.js')
+        script(type="text/javascript", src="/components/angular-route/angular-route.min.js")
+        script(type="text/javascript", src="/components/angular-sanitize/angular-sanitize.min.js")
+        script(type="text/javascript", src="/components/codemirror/lib/codemirror.js")
+        script(type="text/javascript", src="/components/codemirror/mode/xml/xml.js")
+        script(type="text/javascript", src="/components/codemirror/mode/markdown/markdown.js")
+        script(type="text/javascript", src="/components/angular-ui-codemirror/ui-codemirror.min.js")
+        script(type="text/javascript", src="/components/marked/lib/marked.js")
         script(type="text/javascript", src="/js/admin/module.js")
         script(type="text/javascript", src="/js/admin/controller.js")
-        script(type="text/javascript", src="/lib/md-editor/marked.js")
+

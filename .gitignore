@@ -2,3 +2,4 @@
 _Resharper*
 .idea/
 node_modules/
+public/components
