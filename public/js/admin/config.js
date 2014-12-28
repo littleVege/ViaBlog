@@ -1,9 +1,10 @@
 /**
- * Created by little_vege on 2014/12/20.
+ * Created by little_vege on 2014/12/29.
  */
+var app = require('module');
+
 module.exports = function() {
-    var AdminModule = angular.module('admin',['ui.codemirror','ngSanitize','ngRoute']);
-    AdminModule.config(['$routeProvider','$locationProvider',function ($routeProvider,$locationProvider) {
+    app.config(['$routeProvider','$locationProvider',function ($routeProvider,$locationProvider) {
         $routeProvider
             .when('/list', {
                 templateUrl: 'templates/admin/tab_post_list.html',

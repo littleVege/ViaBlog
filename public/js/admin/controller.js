@@ -1,5 +1,6 @@
-AdminModule
-    .controller('PostListController',['$scope','$http',function($scope,$http) {
+var app = require('module');
+module.exports = function() {
+    app.controller('PostListController',['$scope','$http',function($scope,$http) {
         $scope.posts = [
             {title:'name',abstract:'title~~~~~~~~~~',pid:1}
         ];
@@ -45,3 +46,4 @@ AdminModule
             $scope.htmlContent = "";
         }
     ]);
+};

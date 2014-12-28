@@ -1,12 +1,19 @@
+@import (less) "../components/normalize.css/normalize.css";
 @import "viaui/via.ui.util.less";
 @import "admin/var";
 @import "viaui/via.ui.grid.less";
 
 *{
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font: inherit;
+//  font: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
