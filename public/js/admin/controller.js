@@ -1,6 +1,5 @@
-var app = require('module');
-module.exports = function() {
-    app.controller('PostListController',['$scope','$http',function($scope,$http) {
+AdminModule
+    .controller('PostListController',['$scope','$http',function($scope,$http) {
         $scope.posts = [
             {title:'name',abstract:'title~~~~~~~~~~',pid:1}
         ];
@@ -18,7 +17,6 @@ module.exports = function() {
     .controller("EditPostController",['$scope',"$sce",'$routeParams','$http',
         function($scope,$sce,$routeParams,$http) {
             var pid = $routeParams.pid;
-
             if (pid) {
                 $http.get('/api/p/'+pid,function(data) {
                     $scope.mdContent = data.markdown;
@@ -46,4 +44,3 @@ module.exports = function() {
             $scope.htmlContent = "";
         }
     ]);
-};

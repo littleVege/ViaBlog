@@ -3,16 +3,16 @@
         <input type="text" placeholder="title" ng-model="title" class="title"/>
     </header>
     <main class="row content">
-        <section class="col-6 md">
+        <section class="col-lg-6 md">
             <textarea ui-codemirror="cmOption" ng-model="mdContent"></textarea>
         </section>
-        <section ng-bind-html="asHtml(htmlContent)" class="col-6 pre"></section>
+        <section ng-bind-html="asHtml(htmlContent)" class="col-lg-6 pre"></section>
     </main>
     <footer>
-        <div class="col-8"><a class="tag-icon fa fa-tags"></a>
+        <div class="col-lg-8"><a class="tag-icon fa fa-tags"></a>
             <input type="text" placeholder="input a tag" class="input-tag"/>
         </div>
-        <div class="col-4">
+        <div class="col-lg-4">
             <button class="btn primary publish-btn">publish</button>
         </div>
     </footer>

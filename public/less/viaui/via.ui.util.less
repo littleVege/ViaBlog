@@ -66,11 +66,12 @@
 
 
 .clearfix() {
-  &:after,.clearfix {
-    clear: both;
-    display: table;
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
   }
   &:after {
-    content: " ";
+    clear: both;
   }
 }
